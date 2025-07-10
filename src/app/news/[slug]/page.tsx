@@ -2,8 +2,6 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import PageHeader from "@/components/PageHeader";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Search } from "lucide-react";
 
 export default function ArticleDetail() {
   return (

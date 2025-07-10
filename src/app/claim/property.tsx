@@ -1,4 +1,4 @@
-import MotorClaimForm from "@/components/MotorClaimForm";
+
 import PropertyClaimForm from "@/components/PropertyClaimForm";
 import PageHeader from "@/components/PageHeader";
 import Link from "next/link";
