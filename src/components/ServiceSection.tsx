@@ -52,7 +52,7 @@ export default function ServiceSection() {
     <section className="py-20 px-6 max-w-7xl mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-start mb-12 gap-6">
         <div>
-          <p className="text-red-500 font-semibold mb-2">Layanan Kami</p>
+          <p className="text-blue-500 font-semibold mb-2">Layanan Kami</p>
           <h2 className="text-4xl font-bold leading-tight max-w-lg">
             Perlindungan Terbaik untuk Kebutuhan Anda
           </h2>
@@ -66,7 +66,7 @@ export default function ServiceSection() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, index) => (
           <motion.div
-            className="cursor-pointer p-6 border rounded-md group transition-all duration-300 relative pb-12 hover:bg-[#fad783] bg-white text-black hover:shadow-md"
+            className="cursor-pointer p-6 border rounded-md group transition-all duration-300 relative pb-12 hover:bg-blue-500 bg-white dark:bg-gray-700 text-black dark:text-white hover:shadow-md"
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function ServiceSection() {
             <Link href={"/service/test"} key={index} className="">
               <div className="text-2xl font-thin mb-4">―</div>
               <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-sm text-gray-600 mb-6">
+              <p className="text-sm text-gray-600 dark:text-white mb-6">
                 {service.description}
               </p>
               <div className="w-10 h-10 rounded-full flex items-center justify-center absolute bottom-6 right-6 transition-all group-hover:bg-white bg-black text-white group-hover:text-black group-hover:-rotate-45">

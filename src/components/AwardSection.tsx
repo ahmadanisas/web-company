@@ -34,7 +34,7 @@ const AwardSection = () => {
   return (
     <section className="px-6 md:px-20 py-16 border-t">
       <div className="text-center mb-10">
-        <p className="text-sm text-orange-500 font-medium">Penghargaan</p>
+        <p className="text-sm text-blue-500 font-medium">Penghargaan</p>
         <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100 mt-2">
           Apresiasi atas Komitmen dan Kualitas Kami
         </h2>

@@ -12,7 +12,7 @@ export default function WorkingSection() {
     <section className="flex flex-col md:flex-row justify-between items-center px-6 py-16 max-w-6xl mx-auto w-full">
       <div className="w-full md:w-1/2 space-y-6">
         <div>
-          <p className="text-sm text-orange-500 font-medium">Proses Kerja</p>
+          <p className="text-sm text-blue-500 font-bold">How We Work</p>
           <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-gray-100 mt-2">
             Cara Kami Bekerja <br /> untuk Layanan Asuransi Anda
           </h2>
@@ -20,7 +20,7 @@ export default function WorkingSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
           {steps.map((step) => (
             <div key={step.id} className="flex items-start space-x-4">
-              <div className="w-10 h-10 rounded-full bg-sky-200 text-sky-800 font-semibold flex items-center justify-center aspect-square">
+              <div className="w-10 h-10 rounded-full bg-blue-500 text-white font-semibold flex items-center justify-center aspect-square">
                 {step.id}
               </div>
               <div>
@@ -39,7 +39,7 @@ export default function WorkingSection() {
       <div className="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center">
         <div className="max-w-xs md:max-w-sm">
           <Image
-            src="/meeting2.jpg"
+            src="/maximus-work.webp"
             alt="Ilustrasi proses kerja asuransi"
             width={400}
             height={500}

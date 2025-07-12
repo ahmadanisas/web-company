@@ -1,21 +1,13 @@
 import AwardSection from "@/components/AwardSection";
 import PageHeader from "@/components/PageHeader";
 
-import Link from "next/link";
-
 const AboutPage = () => {
   return (
     <>
       <PageHeader className="pt-16 pb-8">
         <div className="w-full inline-flex justify-center gap-3 mb-2">
-          <Link
-            href="/"
-            className="text-sm font-medium text-gray-600 hover:text-gray-800 hover:font-semibold transition-all"
-          >
-            Home
-          </Link>
-          <span className="text-sm font-medium text-gray-600">Profil</span>
-          <span className="text-sm font-medium text-gray-800">
+          <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Profil</span>
+          <span className="text-sm font-medium text-blue-300">
             Tentang Kami
           </span>
         </div>
@@ -75,7 +67,7 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Vision */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-yellow-600 border-b border-yellow-400 pb-2">
+              <h2 className="text-2xl font-bold text-blue-500 border-b border-blue-500 pb-2">
                 Visi
               </h2>
               <p className="text-base text-gray-700 dark:text-gray-200">
@@ -86,7 +78,7 @@ const AboutPage = () => {
 
             {/* Mission */}
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-yellow-600 border-b border-yellow-400 pb-2">
+              <h2 className="text-2xl font-bold text-blue-500 border-b border-blue-500 pb-2">
                 Misi
               </h2>
               <ul className="list-disc list-inside space-y-3 text-base text-gray-700 dark:text-gray-200">

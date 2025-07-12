@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Twitter, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -10,14 +10,11 @@ export default function Footer() {
         {/* Logo + desc */}
         <div className="md:col-span-1">
           <div className="flex items-center mb-4">
-            {/* Ganti ini dengan logo kamu */}
-            <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-pink-500 mr-2" />
-            <h3 className="text-xl font-bold">Maximus</h3>
+            <Link href="/" className="flex items-center cursor-pointer">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-blue-500 to-blue-950 mr-2" />
+              <h3 className="text-xl font-bold">Maximus</h3>
+            </Link>
           </div>
-          <p className="text-sm text-gray-400 leading-relaxed">
-            We denounce with righteous indignation and dislike men who are so
-            beguiled and demoralized by the charms of pleasure.
-          </p>
         </div>
 
         {/* Footer menu sections */}
@@ -35,19 +32,19 @@ export default function Footer() {
           {
             title: "Resources",
             links: [
-              "Free eBooks",
-              "Development Tutorial",
-              "How to - Blog",
-              "Youtube Playlist",
+              "Blog",
+              "Documentation",
+              "API Reference",
+              "Community Forum",
             ],
           },
           {
-            title: "Link",
+            title: "Contact",
             links: [
-              "Free eBooks",
-              "Development Tutorial",
-              "How to - Blog",
-              "Youtube Playlist",
+              "Email Us",
+              "Support Center",
+              "Feedback",
+              "Press Inquiries",
             ],
           },
         ].map((section, i) => (
@@ -71,19 +68,28 @@ export default function Footer() {
 
       {/* Bottom section */}
       <div className="border-t border-gray-700 mt-12 pt-8 px-4 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto">
-        <p>© 2025 Maximus – Insurance Company. All Rights Reserved.</p>
+        <p>
+          © 2025 by Ahmadanisa. All Rights
+          Reserved.
+        </p>
         <div className="flex space-x-4 mt-4 md:mt-0">
-          <Link href="#">
+          <Link
+            href="https://facebook.com/kresna.insurance"
+            className="hover:text-white"
+          >
             <Facebook className="w-4 h-4 hover:text-white" />
           </Link>
-          <Link href="#">
+          <Link
+            href="https://twitter.com/asuransimaximus"
+            className="hover:text-white"
+          >
             <Twitter className="w-4 h-4 hover:text-white" />
           </Link>
-          <Link href="#">
+          <Link
+            href="https://instagram.com/asuransimaximus"
+            className="hover:text-white"
+          >
             <Instagram className="w-4 h-4 hover:text-white" />
-          </Link>
-          <Link href="#">
-            <Linkedin className="w-4 h-4 hover:text-white" />
           </Link>
         </div>
       </div>

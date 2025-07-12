@@ -9,13 +9,13 @@ const ServiceSection = () => {
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left: Title & CTA */}
         <div>
-          <p className="text-red-500 font-medium mb-2">Layanan Kami</p>
+          <p className="text-blue-500 font-bold medium mb-2">Our Services</p>
           <h2 className="text-3xl/normal md:text-4xl/normal font-bold text-gray-900 dark:text-gray-200 mb-4 spacing">
             Perlindungan Asuransi Terpercaya untuk Berbagai Kebutuhan
           </h2>
           <Link
-            href="/services"
-            className="inline-flex items-center text-sm gap-2 mt-4 px-7 py-4 bg-yellow-400 text-black font-semibold rounded-full hover:bg-yellow-500 transition"
+            href="/service"
+            className="inline-flex items-center text-sm font-semibold leading-0.5 gap-2 bg-blue-500 text-white px-7 py-4 rounded-full hover:bg-gray-800 transition transform duration-300 hover:scale-105"
           >
             Learn More <ArrowUpRight />
           </Link>

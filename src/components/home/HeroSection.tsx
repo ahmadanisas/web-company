@@ -1,31 +1,32 @@
 "use client";
 
-import { useState, useEffect, useRef, KeyboardEvent } from "react";
+import { useState, useEffect, KeyboardEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
+// Slides array: make sure all images are in /public folder (e.g. /public/slide-health.webp)
 const slides = [
   {
-    image: "/assets/slide-health.webp", // Ensure images are in the 'public' folder
+    image: "/slide-health.webp",
     title: "Protect Your Family's Future",
     subtitle: "Comprehensive insurance solutions tailored to your needs",
     cta: "Get Quote",
   },
   {
-    image: "/assets/slide-property.webp",
+    image: "/slide-property1.jpg",
     title: "Secure Your Home & Life",
     subtitle: "Peace of mind with our comprehensive coverage plans",
     cta: "Learn More",
   },
   {
-    image: "/assets/slide-family.webp",
+    image: "/slide-family.webp",
     title: "Journey with Confidence",
     subtitle: "Travel insurance that covers you wherever life takes you",
     cta: "Explore Plans",
   },
   {
-    image: "/assets/slide-medical.webp",
+    image: "/slide-medical.webp",
     title: "Health & Wellness Coverage",
     subtitle: "Comprehensive health insurance for you and your loved ones",
     cta: "View Options",
@@ -35,17 +36,6 @@ const slides = [
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
   const slideCount = slides.length;
-  const autoAdvanceRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Auto-advance slides
-  useEffect(() => {
-    autoAdvanceRef.current = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slideCount);
-    }, 5000);
-    return () => {
-      if (autoAdvanceRef.current) clearInterval(autoAdvanceRef.current);
-    };
-  }, [slideCount]);
 
   // Keyboard navigation
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
@@ -59,6 +49,14 @@ const HeroSection = () => {
   const nextSlide = () => setCurrent((prev) => (prev + 1) % slideCount);
   const prevSlide = () =>
     setCurrent((prev) => (prev - 1 + slideCount) % slideCount);
+
+  // Auto slider with setInterval
+  useEffect(() => {
+    const intervalId = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    // Cleanup interval when component unmounts
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <section
@@ -82,17 +80,21 @@ const HeroSection = () => {
             aria-roledescription="slide"
             aria-label={`${idx + 1} of ${slideCount}`}
           >
+            {/* 
+              Parent div harus relative dan punya tinggi (height) agar <Image fill /> bisa bekerja.
+              Gambar akan mengambil seluruh area parent.
+            */}
             <div className="relative w-full h-full min-h-[400px]">
               <Image
                 src={slide.image}
                 alt={slide.title}
-                layout="responsive"
-                width={1200} // Add explicit width and height for better control
-                height={600} // Modify to match your image aspect ratio
+                fill
                 priority={idx === 0}
                 className="object-cover"
+                sizes="100vw"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+              {/* Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-400 via-blue to-transparent opacity-70"></div>
             </div>
             {/* Content Overlay */}
             {idx === current && (
@@ -106,7 +108,7 @@ const HeroSection = () => {
                   </p>
                   <Button
                     size="lg"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 animate-fade-in"
+                    className="bg-blue-500 hover:bg-blue-500 text-white px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105 animate-fade-in"
                   >
                     {slide.cta}
                   </Button>

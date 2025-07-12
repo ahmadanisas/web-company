@@ -75,7 +75,7 @@ function TeamCarousel({
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start mb-12 gap-6">
           <div>
-            <Badge className="bg-red-100 text-red-600">{title}</Badge>
+            <Badge className="bg-sky-200 text-blue-800">{title}</Badge>
             <h2 className="text-3xl font-bold mt-4 mb-2">{heading}</h2>
           </div>
           <p className="text-muted-foreground max-w-md mt-2">{description}</p>
