@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Twitter, Instagram, Github } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -74,22 +74,22 @@ export default function Footer() {
         </p>
         <div className="flex space-x-4 mt-4 md:mt-0">
           <Link
-            href="https://facebook.com/kresna.insurance"
-            className="hover:text-white"
-          >
-            <Facebook className="w-4 h-4 hover:text-white" />
-          </Link>
-          <Link
-            href="https://twitter.com/asuransimaximus"
+            href="https://twitter.com/waterelily"
             className="hover:text-white"
           >
             <Twitter className="w-4 h-4 hover:text-white" />
           </Link>
           <Link
-            href="https://instagram.com/asuransimaximus"
+            href="https://instagram.com/nisasusatyo"
             className="hover:text-white"
           >
             <Instagram className="w-4 h-4 hover:text-white" />
+          </Link>
+          <Link
+            href="https://github.com/ahmadanisas"
+            className="hover:text-white"
+          >
+            <Github className="w-4 h-4 hover:text-white" />
           </Link>
         </div>
       </div>
