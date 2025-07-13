@@ -10,8 +10,8 @@ const AboutSection = () => {
         <div className="relative">
           {/* Gambar utama */}
           <Image
-            src="/asuransimaximus.webp"
-            alt="Meeting"
+            src="/maximus.webp"
+            alt="Maximus"
             width={600}
             height={400}
             className="rounded-md shadow-md transform transition duration-300 ease-in-out hover:scale-105"

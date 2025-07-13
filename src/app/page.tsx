@@ -1,3 +1,4 @@
+import FloatingSocialButton from "@/components/FloatingSocialButton";
 import AboutSection from "@/components/home/AboutSection";
 import Hero from "@/components/home/HeroSection";
 import ServiceSection from "@/components/home/ServiceSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <ServiceSection />
       <TestimonialSection />
       <WorkingSection />
+      <FloatingSocialButton />
     </main>
   );
 }

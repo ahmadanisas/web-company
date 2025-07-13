@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Twitter, Instagram, Github } from "lucide-react";
+import { Twitter, Instagram, Github, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -68,10 +68,7 @@ export default function Footer() {
 
       {/* Bottom section */}
       <div className="border-t border-gray-700 mt-12 pt-8 px-4 text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto">
-        <p>
-          © 2025 by Ahmadanisa. All Rights
-          Reserved.
-        </p>
+        <p>© 2025 by Ahmadanisa. All Rights Reserved.</p>
         <div className="flex space-x-4 mt-4 md:mt-0">
           <Link
             href="https://twitter.com/waterelily"
@@ -90,6 +87,12 @@ export default function Footer() {
             className="hover:text-white"
           >
             <Github className="w-4 h-4 hover:text-white" />
+          </Link>
+          <Link
+            href="mailto:ahmadanisasusatyo@email.com"
+            className="hover:text-white"
+          >
+            <Mail className="w-4 h-4 hover:text-white" />
           </Link>
         </div>
       </div>
